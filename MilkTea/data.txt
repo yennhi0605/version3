@@ -1,0 +1,46 @@
+drop database if exists MilkTeaShop;
+create database MilkTeaShop;
+use MilkTeaShop;
+
+create table MilkTeas(
+	id int primary key AUTO_INCREMENT,
+	name varchar(50),
+	price float,
+	type varchar(50),
+	image varchar(50)
+);
+
+INSERT INTO `MilkTeas`(`name`, `price`, `type`, `image`) VALUES ("Bạc Xỉu", 15000, "Coffee", "image/bacxiu.jpg");
+INSERT INTO `MilkTeas`(`name`, `price`, `type`, `image`) VALUES ("Cà Phê Đen", 8000, "Coffee", "image/cfden.jpg");
+INSERT INTO `MilkTeas`(`name`, `price`, `type`, `image`) VALUES ("Cà Phê Sữa", 10000, "Coffee", "image/cfsua.jpg");
+INSERT INTO `MilkTeas`(`name`, `price`, `type`, `image`) VALUES ("Ca Cao", 30000, "Coffee", "image/cacao.jpg");
+INSERT INTO `MilkTeas`(`name`, `price`, `type`, `image`) VALUES ("Espresso", 40000, "Coffee", "image/espresso.jpg");
+INSERT INTO `MilkTeas`(`name`, `price`, `type`, `image`) VALUES ("Latte", 45000, "Coffee", "image/latte.jpg");
+INSERT INTO `MilkTeas`(`name`, `price`, `type`, `image`) VALUES ("Orion", 50000, "Coffee", "image/orion.jpg");
+INSERT INTO `MilkTeas`(`name`, `price`, `type`, `image`) VALUES ("Trà Xanh Đá Xay", 60000, "Coffee", "image/traxanh.jpg");
+INSERT INTO `MilkTeas`(`name`, `price`, `type`, `image`) VALUES ("Trà Lipton", 25000, "Juice_Tea", "image/lipton.jpg");
+INSERT INTO `MilkTeas`(`name`, `price`, `type`, `image`) VALUES ("Trà Tắc", 10000, "Juice_Tea", "image/tratac.jpg");
+INSERT INTO `MilkTeas`(`name`, `price`, `type`, `image`) VALUES ("Trà Đào", 250000, "Juice_Tea", "image/tradao.jpg");
+INSERT INTO `MilkTeas`(`name`, `price`, `type`, `image`) VALUES ("Sữa Tươi Thạch Trái Cây", 30000, "Juice_Tea", "image/thach.jpg");
+INSERT INTO `MilkTeas`(`name`, `price`, `type`, `image`) VALUES ("Sinh Tố Xoài", 35000, "Smoothie", "image/xoai.jpg");
+INSERT INTO `MilkTeas`(`name`, `price`, `type`, `image`) VALUES ("Yogurt Trái Cây", 25000, "Smoothie", "image/traicay.jpg");
+INSERT INTO `MilkTeas`(`name`, `price`, `type`, `image`) VALUES ("Sinh Tố Bơ", 35000, "Smoothie", "image/bo.jpg");
+INSERT INTO `MilkTeas`(`name`, `price`, `type`, `image`) VALUES ("Sinh Tố Đá Xay", 25000, "Smoothie", "image/da.jpg");
+
+create table User(
+	id int primary key AUTO_INCREMENT,
+	username varchar(50) UNIQUE,
+	password varchar(50),
+	fullName varchar(50),
+	role varchar(20)
+);
+INSERT INTO `user`(`username`, `fullName` ,`password`,`role`) VALUES ('admin', 'Administator' ,'admin', 'admin');
+INSERT INTO `user`(`username`, `fullName` ,`password`,`role`) VALUES ('nam34', 'Le Nam', '123', 'user');
+
+create table Cart(
+	id int primary key auto_increment,
+	name varchar(255),
+	price float,
+	type varchar(20)
+	img varchar(50),
+);
